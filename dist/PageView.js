@@ -1,18 +1,14 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -26,38 +22,35 @@ var PageView = function (_React$Component) {
   function PageView() {
     _classCallCheck(this, PageView);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(PageView).apply(this, arguments));
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
   }
 
-  _createClass(PageView, [{
-    key: 'render',
-    value: function render() {
-      var linkClassName = this.props.pageLinkClassName;
-      var cssClassName = this.props.pageClassName;
+  PageView.prototype.render = function render() {
+    var linkClassName = this.props.pageLinkClassName;
+    var cssClassName = this.props.pageClassName;
 
-      if (this.props.selected) {
-        if (typeof cssClassName !== 'undefined') {
-          cssClassName = cssClassName + ' ' + this.props.activeClassName;
-        } else {
-          cssClassName = this.props.activeClassName;
-        }
+    if (this.props.selected) {
+      if (typeof cssClassName !== 'undefined') {
+        cssClassName = cssClassName + ' ' + this.props.activeClassName;
+      } else {
+        cssClassName = this.props.activeClassName;
       }
-
-      return _react2.default.createElement(
-        'li',
-        { className: cssClassName },
-        _react2.default.createElement(
-          'a',
-          _extends({}, this.props, { className: linkClassName }),
-          this.props.page
-        )
-      );
     }
-  }]);
+
+    return _react2['default'].createElement(
+      'li',
+      { className: cssClassName },
+      _react2['default'].createElement(
+        'a',
+        _extends({}, this.props, { className: linkClassName }),
+        this.props.page
+      )
+    );
+  };
 
   return PageView;
-}(_react2.default.Component);
+}(_react2['default'].Component);
 
-exports.default = PageView;
+exports['default'] = PageView;
 ;
 //# sourceMappingURL=PageView.js.map

@@ -1,16 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+exports.__esModule = true;
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -24,25 +20,22 @@ var BreakView = function (_React$Component) {
   function BreakView() {
     _classCallCheck(this, BreakView);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(BreakView).apply(this, arguments));
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
   }
 
-  _createClass(BreakView, [{
-    key: 'render',
-    value: function render() {
-      var label = this.props.breakLabel;
+  BreakView.prototype.render = function render() {
+    var label = this.props.breakLabel;
 
-      return _react2.default.createElement(
-        'li',
-        { className: 'break' },
-        label
-      );
-    }
-  }]);
+    return _react2['default'].createElement(
+      'li',
+      { className: 'break' },
+      label
+    );
+  };
 
   return BreakView;
-}(_react2.default.Component);
+}(_react2['default'].Component);
 
-exports.default = BreakView;
+exports['default'] = BreakView;
 ;
 //# sourceMappingURL=BreakView.js.map
